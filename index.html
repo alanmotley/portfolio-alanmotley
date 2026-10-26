@@ -353,7 +353,7 @@
     const selectedWorkSection = document.querySelector('#work');
     const placeSurfaceStudio = () => {
       if (!surfaceStudio || !selectedWorkSection) return;
-      selectedWorkSection.parentNode.insertBefore(surfaceStudio, selectedWorkSection.nextElementSibling);
+      selectedWorkSection.parentNode.insertBefore(surfaceStudio, selectedWorkSection);
       surfaceStudio.querySelector('.kicker').textContent = '02 / FEATURED CASE STUDY';
       selectedWorkSection.querySelector('.kicker').textContent = '03 / SELECTED WORK';
       document.querySelector('#media .kicker').textContent = '04 / MEDIA INDEX';
