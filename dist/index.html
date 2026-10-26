@@ -351,12 +351,15 @@
     document.addEventListener('keydown', (event) => { if (!lightbox.classList.contains('open')) return; if (event.key === 'Escape') closePhoto(); if (event.key === 'ArrowLeft') showPhoto(photoIndex - 1); if (event.key === 'ArrowRight') showPhoto(photoIndex + 1); });
     const surfaceStudio = document.querySelector('#surface-studio');
     const selectedWork = document.querySelector('#work');
-    if (surfaceStudio && selectedWork) {
-      selectedWork.after(surfaceStudio);
+    const placeSurfaceStudio = () => {
+      if (!surfaceStudio || !selectedWork) return;
+      selectedWork.parentNode.insertBefore(surfaceStudio, selectedWork.nextElementSibling);
       surfaceStudio.querySelector('.kicker').textContent = '02 / FEATURED CASE STUDY';
       selectedWork.querySelector('.kicker').textContent = '03 / SELECTED WORK';
       document.querySelector('#media .kicker').textContent = '04 / MEDIA INDEX';
-    }
+    };
+    placeSurfaceStudio();
+    window.addEventListener('load', placeSurfaceStudio, { once: true });
   </script>
   <script>
     const surfacePlaylist = document.querySelector('a[href*="PLNA-j_cL4mUSMy6sCtGa4bam0nrkXD1As"]');
