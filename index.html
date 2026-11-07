@@ -139,18 +139,18 @@
     .sectionhead h2,.split h2,.feature-copy h3,.card h3,.norynthe h3{letter-spacing:-.045em}
     footer{background:#111a20!important;color:rgba(245,248,249,.8)!important;padding:46px 0 54px!important;border-top:1px solid rgba(245,248,249,.2)!important;text-align:left!important;font-family:var(--sans);font-weight:400;letter-spacing:0;text-transform:none}
     footer .footer-inner{display:grid!important;grid-template-columns:minmax(220px,.8fr) minmax(0,1.6fr)!important;gap:34px!important;align-items:end!important;width:min(100%,1280px);margin:0 auto;padding:0 30px}
-    footer .footer-copy{color:rgba(245,248,249,.74)!important;font-size:15px;line-height:1.55;max-width:44ch}
+    footer .footer-copy{color:rgba(245,248,249,.74)!important;font-size:15px;font-weight:400;line-height:1.55;max-width:44ch}
     footer .footer-copy p{margin:0!important}
     footer .footer-copy .footer-copyright{margin-top:10px;font-size:13px;letter-spacing:.04em}
-    footer .footer-links{display:flex!important;justify-content:flex-end!important;gap:8px!important;flex-wrap:wrap;margin-top:0!important}
+    footer .footer-links{position:relative;display:flex!important;justify-content:flex-end!important;gap:8px!important;flex-wrap:wrap;margin-top:0!important;padding-bottom:48px}
     footer .footer-links a{color:rgba(245,248,249,.78)!important;background:transparent!important;border:1px solid rgba(245,248,249,.24)!important;padding:10px 13px!important;font-size:.7rem!important;letter-spacing:.1em!important;text-transform:uppercase;transition:background .2s ease,color .2s ease,border-color .2s ease!important}
     footer .footer-links a:hover{color:#111a20;background:#f5f8f9;border-color:#f5f8f9}
-    footer .footer-links a.footer-featured{color:#111a20;background:#e6a5a0;border-color:#e6a5a0}
+    footer .footer-links a.footer-featured{color:#111a20!important;background:#e6a5a0!important;border-color:#e6a5a0!important}
     footer .footer-links a.footer-featured:hover{background:#f5f8f9;border-color:#f5f8f9}
-    footer .footer-links a.footer-privacy{color:rgba(245,248,249,.5)!important;border-color:rgba(245,248,249,.14)!important;font-size:.64rem!important;padding:8px 11px!important}
+    footer .footer-links a.footer-privacy{position:absolute;right:0;bottom:0;color:rgba(245,248,249,.5)!important;border-color:rgba(245,248,249,.14)!important;font-size:.64rem!important;padding:8px 11px!important}
     footer .footer-links a.footer-privacy:hover{color:#111a20;background:#f5f8f9;border-color:#f5f8f9}
     #demo-reel{border-bottom:0}
-    @media(max-width:760px){footer .footer-inner{grid-template-columns:1fr}footer .footer-inner>span:last-child{justify-content:flex-start}}
+    @media(max-width:760px){footer .footer-inner{grid-template-columns:1fr}footer .footer-inner>span:last-child{justify-content:flex-start}footer .footer-links{padding-bottom:0}footer .footer-links a.footer-privacy{position:static;margin-left:0}}
   </style>
   <style>
     /* Final rhythm pass: keep the portfolio airy, aligned, and easy to scan. */
